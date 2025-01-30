@@ -20,15 +20,11 @@ source venv/bin/activate
 git clone https://github.com/Ayaa-Alaa/PN.git
 ```
 
-### Masuk ke folder
+### Masuk ke folder dan Install
 Untuk membuat virtual environment dengan nama `venv`, jalankan perintah berikut:
 ```bash
-cd PN
+cd PN && bash run_privasea.sh
 ```
 
-### Langkah 3: Jalankan Script
-```bash
-bash run_privasea.sh
-```
 
 

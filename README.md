@@ -56,7 +56,7 @@ mv ./NAMA_FILE_AWALAN_UTC  ./wallet_keystore
 ls
 ```
 
-## Setting node di dashboard, ambil faucet, paste faucet arb sepolia ke address node dikit $10
+## Setting node di dashboard, ambil faucet, paste faucet arb sepolia ke address node dikit 0.001 eth arb
 ```bash
 https://deepsea-beta.privasea.ai/privanetixNode
 ```

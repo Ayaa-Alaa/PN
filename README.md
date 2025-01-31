@@ -1,4 +1,4 @@
-# Install alat tempur
+## Install alat tempur
 ```bash
 sudo apt update && sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 ```
@@ -9,12 +9,12 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 ```
 
-# Update
+## Update
 ```bash
 sudo apt update && sudo apt install -y docker-ce
 ```
 
-# Aktifkan docker
+## Aktifkan docker
 ```bash
 sudo systemctl start docker
 ```
@@ -22,65 +22,65 @@ sudo systemctl start docker
 sudo systemctl enable docker
 ```
 
-# Install file privasea ke docker
+## Install file privasea ke docker
 ```bash
 sudo docker pull privasea/acceleration-node-beta
 ```
 
-# Buat folder Privasea
+## Buat folder Privasea
 ```bash
 mkdir -p /privasea/config && cd /privasea
 ```
 
-# Buat kunci node, lalu buat password "123"
+## Buat kunci node, lalu buat password "123"
 ```bash
 sudo docker run -it -v "/privasea/config:/app/config"  \privasea/acceleration-node-beta:latest ./node-calc new_keystore
 ```
 
-# Salin addressnya, caranya tinggal klik 2 kali di namanya terus paste ke notepad
+## Salin addressnya, caranya tinggal klik 2 kali di namanya terus paste ke notepad
 
-# Dibawah address itu file keystore nya, salin juga, sama juga
+## Dibawah address itu file keystore nya, salin juga, sama juga
 
-# Masuk ke folder
+## Masuk ke folder
 ```bash
 cd /privasea/config && ls
 ```
 
-# Ganti nama keystorenya, 
+## Ganti nama keystorenya, 
 ```bash
 mv ./NAMA_FILE_AWALAN_UTC  ./wallet_keystore 
 ```
 
-# Replace UTC--2025-01-06T06-11-07.485797065Z--f07c3ef23ae7beb8cd8ba5ff546e35fd4b332b34 with the name of the keystore file you found.
+## Replace UTC--2025-01-06T06-11-07.485797065Z--f07c3ef23ae7beb8cd8ba5ff546e35fd4b332b34 with the name of the keystore file you found.
 
-# Cek namanya udah keganti jadi "wallet_keystore" apa belum
+## Cek namanya udah keganti jadi "wallet_keystore" apa belum
 ```bash
 ls
 ```
 
-# Setting node di dashboard, ambil faucet, paste faucet arb sepolia ke address node dikit $10
+## Setting node di dashboard, ambil faucet, paste faucet arb sepolia ke address node dikit $10
 ```bash
 https://deepsea-beta.privasea.ai/privanetixNode
 ```
 
-# Switch to the program running directory
+## Switch to the program running directory
 ```bash
 cd /privasea/
 ```
 
-# Jalankan node
+## Jalankan node
 ```bash
 sudo docker run  -d   -v "/privasea/config:/app/config" \-e KEYSTORE_PASSWORD=123 \privasea/acceleration-node-beta:latest
 ```
 
-# Salin outputnya, klik 2 kali, paste di notepad
+## Salin outputnya, klik 2 kali, paste di notepad
 
-# Cek node
+## Cek node
 ```bash
 sudo docker logs -f OUTPUT_TADI
 ```
 
-# Stop nodenya
+## Stop nodenya
 ```bash
 sudo docker ps -q --filter "ancestor=privasea/acceleration-node-beta:latest" | xargs --no-run-if-empty docker stop
 ```

@@ -46,12 +46,10 @@ sudo docker run -it -v "/privasea/config:/app/config"  \privasea/acceleration-no
 cd /privasea/config && ls
 ```
 
-## Ganti nama keystorenya, 
+## Ganti nama keystorenya jadi "wallet_keystore"
 ```bash
 mv ./NAMA_FILE_AWALAN_UTC  ./wallet_keystore 
 ```
-
-## Replace UTC--2025-01-06T06-11-07.485797065Z--f07c3ef23ae7beb8cd8ba5ff546e35fd4b332b34 with the name of the keystore file you found.
 
 ## Cek namanya udah keganti jadi "wallet_keystore" apa belum
 ```bash
